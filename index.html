@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Muhammad Hamza Arif, Accounts and Finance Professional based in Karachi, Pakistan.">
-  <title> M Hamza Arif | Accounts & Finance Professional</title>
+
+  <title>M Hamza Arif | Accounts & Finance Professional</title>
+
   <style>
     :root {
       --ink: #172033;
@@ -15,138 +18,387 @@
       --line: #e2e8f0;
       --white: #fff;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     html { scroll-behavior: smooth; }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
       background: var(--white);
       line-height: 1.65;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, 90%); margin: auto; }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
     header {
       background: rgba(255,255,255,.96);
       border-bottom: 1px solid var(--line);
-      position: sticky; top: 0; z-index: 10;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       backdrop-filter: blur(10px);
     }
+
     nav {
-      min-height: 72px; display: flex; align-items: center;
-      justify-content: space-between; gap: 24px;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
     }
-    .brand { font-size: 1.15rem; font-weight: 800; letter-spacing: -.5px; }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -.5px;
+    }
+
     .brand span { color: var(--blue); }
-    .nav-links { display: flex; gap: 25px; color: #475569; font-size: .92rem; }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      color: #475569;
+      font-size: .92rem;
+    }
+
     .nav-links a:hover { color: var(--blue); }
+
     .hero {
       background: radial-gradient(circle at 85% 20%, #244b72 0, transparent 32%), var(--navy);
-      color: white; padding: 105px 0 100px;
+      color: white;
+      padding: 105px 0 100px;
     }
+
     .hero-content { max-width: 760px; }
+
     .eyebrow {
-      color: #93c5fd; text-transform: uppercase; letter-spacing: 2px;
-      font-size: .78rem; font-weight: 700; margin-bottom: 18px;
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .78rem;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
-    h1 { font-size: clamp(2.7rem, 7vw, 5rem); line-height: 1.08; letter-spacing: -2px; }
+
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
     h1 span { color: #93c5fd; }
-    .hero p { color: #d5e2ef; max-width: 650px; font-size: 1.1rem; margin: 25px 0 30px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 13px; }
-    .btn {
-      display: inline-block; padding: 12px 21px; border-radius: 7px;
-      font-weight: 700; font-size: .93rem; transition: .2s ease;
+
+    .hero p {
+      color: #d5e2ef;
+      max-width: 650px;
+      font-size: 1.1rem;
+      margin: 25px 0 30px;
     }
-    .btn-primary { background: var(--blue); color: white; }
-    .btn-primary:hover { background: #1d4ed8; transform: translateY(-2px); }
-    .btn-outline { border: 1px solid #9fb4c9; color: white; }
-    .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 21px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: .93rem;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #9fb4c9;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.1);
+    }
+
     section { padding: 82px 0; }
-    .section-kicker { color: var(--blue); font-size: .78rem; font-weight: 800; letter-spacing: 1.8px; text-transform: uppercase; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; margin: 9px 0 16px; letter-spacing: -.8px; }
-    .section-intro { max-width: 680px; color: var(--muted); }
-    .about-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 55px; align-items: start; margin-top: 35px; }
-    .about-copy p { color: #526174; margin-bottom: 15px; }
+
+    .section-kicker {
+      color: var(--blue);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin: 9px 0 16px;
+      letter-spacing: -.8px;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 55px;
+      align-items: start;
+      margin-top: 35px;
+    }
+
+    .about-copy p {
+      color: #526174;
+      margin-bottom: 15px;
+    }
+
+    /* Profile Picture */
+    .profile-wrapper {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 50%;
+      border: 5px solid white;
+      outline: 2px solid #bfdbfe;
+      box-shadow: 0 8px 25px rgba(15, 35, 60, .15);
+    }
+
     .quick-facts {
-      background: var(--pale); border: 1px solid var(--line); border-radius: 14px;
+      background: var(--pale);
+      border: 1px solid var(--line);
+      border-radius: 14px;
       padding: 25px;
     }
-    .fact { padding: 12px 0; border-bottom: 1px solid #dce5ef; }
+
+    .fact {
+      padding: 12px 0;
+      border-bottom: 1px solid #dce5ef;
+    }
+
     .fact:last-child { border-bottom: 0; }
-    .fact strong { display: block; font-size: .82rem; color: var(--muted); margin-bottom: 3px; }
+
+    .fact strong {
+      display: block;
+      font-size: .82rem;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
     .fact span { font-weight: 700; }
+
     .soft-section { background: var(--pale); }
-    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 35px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 35px;
+    }
+
     .card {
-      background: white; border: 1px solid var(--line); border-radius: 13px;
-      padding: 25px; box-shadow: 0 5px 18px rgba(15, 35, 60, .035);
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 25px;
+      box-shadow: 0 5px 18px rgba(15, 35, 60, .035);
     }
-    .card-number { color: var(--blue); font-weight: 800; font-size: .8rem; }
-    .card h3 { font-size: 1.08rem; margin: 9px 0 8px; }
-    .card p { color: var(--muted); font-size: .93rem; }
+
+    .card-number {
+      color: var(--blue);
+      font-weight: 800;
+      font-size: .8rem;
+    }
+
+    .card h3 {
+      font-size: 1.08rem;
+      margin: 9px 0 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
     .experience {
-      margin-top: 35px; border-left: 2px solid #bfdbfe; padding: 4px 0 4px 25px;
+      margin-top: 35px;
+      border-left: 2px solid #bfdbfe;
+      padding: 4px 0 4px 25px;
     }
+
     .experience h3 { font-size: 1.25rem; }
-    .experience .company { color: var(--blue); font-weight: 700; margin: 3px 0 12px; }
-    .experience p { color: var(--muted); max-width: 760px; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+
+    .experience .company {
+      color: var(--blue);
+      font-weight: 700;
+      margin: 3px 0 12px;
+    }
+
+    .experience p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
     .tag {
-      background: #eff6ff; color: #1e40af; border: 1px solid #dbeafe;
-      border-radius: 30px; padding: 8px 13px; font-size: .87rem; font-weight: 700;
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #dbeafe;
+      border-radius: 30px;
+      padding: 8px 13px;
+      font-size: .87rem;
+      font-weight: 700;
     }
+
     .education-card {
-      margin-top: 32px; padding: 27px; border: 1px solid var(--line);
-      border-radius: 13px; max-width: 720px;
+      margin-top: 32px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      max-width: 720px;
     }
+
     .education-card h3 { font-size: 1.2rem; }
-    .education-card p { color: var(--muted); margin-top: 5px; }
-    .contact {
-      background: var(--navy); color: white; text-align: center;
+
+    .education-card p {
+      color: var(--muted);
+      margin-top: 5px;
     }
+
+    .contact {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+    }
+
     .contact .section-kicker { color: #93c5fd; }
-    .contact p { color: #d5e2ef; max-width: 600px; margin: 0 auto 25px; }
+
+    .contact p {
+      color: #d5e2ef;
+      max-width: 600px;
+      margin: 0 auto 25px;
+    }
+
     .contact .btn-outline { border-color: #8ba5bf; }
-    footer { background: #0b1929; color: #a9bacb; text-align: center; padding: 20px; font-size: .85rem; }
+
+    footer {
+      background: #0b1929;
+      color: #a9bacb;
+      text-align: center;
+      padding: 20px;
+      font-size: .85rem;
+    }
+
     @media (max-width: 760px) {
-      .nav-links { gap: 13px; font-size: .82rem; }
-      .about-grid { grid-template-columns: 1fr; gap: 25px; }
+      .nav-links {
+        gap: 13px;
+        font-size: .82rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
       .cards { grid-template-columns: 1fr 1fr; }
+
       .hero { padding: 78px 0; }
+
       section { padding: 65px 0; }
     }
+
     @media (max-width: 520px) {
-      nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 14px 0; gap: 8px; }
-      .nav-links { width: 100%; justify-content: space-between; gap: 8px; }
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+        gap: 8px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+      }
+
       .cards { grid-template-columns: 1fr; }
+
       h1 { letter-spacing: -1.2px; }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <div class="container">
       <nav>
         <a class="brand" href="#home">MHA<span>.</span></a>
+
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
-<a href="https://www.linkedin.com/in/muhammad-hamza-arif/"
-   target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/muhammad-hamza-arif/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
+
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-content">
           <div class="eyebrow">Welcome to my website</div>
+
           <h1>Hi, I'm <span>Muhammad Hamza Arif.</span></h1>
-          <p>Accounts &amp; Finance Professional with 5+ years of hands-on experience in financial operations, reconciliations, taxation, payroll and reporting.</p>
+
+          <p>
+            Accounts &amp; Finance Professional with 5+ years of hands-on experience in financial operations, reconciliations, taxation, payroll and reporting.
+          </p>
+
           <div class="buttons">
             <a class="btn btn-primary" href="#about">Explore My Portfolio</a>
             <a class="btn btn-outline" href="#contact">Get in Touch</a>
@@ -157,52 +409,149 @@
 
     <section id="about">
       <div class="container">
+
         <div class="section-kicker">A little about me</div>
         <h2>About Me</h2>
-        <p class="section-intro">A finance professional who values accuracy, responsibility and continuous learning.</p>
+
+        <p class="section-intro">
+          A finance professional who values accuracy, responsibility and continuous learning.
+        </p>
+
         <div class="about-grid">
+
           <div class="about-copy">
-            <p>I'm Muhammad Hamza Arif, an Accounts and Finance professional based in Karachi, Pakistan. I have over five years of practical experience supporting day-to-day accounting and finance operations in a corporate environment.</p>
-            <p>My work involves maintaining financial records, processing accounting entries, reconciling bank and ledger balances, supporting payroll and taxation matters, coordinating payments, and assisting with month-end closing and audit requirements.</p>
-            <p>I enjoy learning new systems and improving the way finance tasks are organised. I believe that strong attention to detail, consistency and clear communication are essential to reliable financial reporting.</p>
+            <p>
+              I'm Muhammad Hamza Arif, an Accounts and Finance professional based in Karachi, Pakistan. I have over five years of practical experience supporting day-to-day accounting and finance operations in a corporate environment.
+            </p>
+
+            <p>
+              My work involves maintaining financial records, processing accounting entries, reconciling bank and ledger balances, supporting payroll and taxation matters, coordinating payments, and assisting with month-end closing and audit requirements.
+            </p>
+
+            <p>
+              I enjoy learning new systems and improving the way finance tasks are organised. I believe that strong attention to detail, consistency and clear communication are essential to reliable financial reporting.
+            </p>
           </div>
-          <aside class="quick-facts">
-            <div class="fact"><strong>Current Position</strong><span>Senior Officer – Accounts &amp; Finance</span></div>
-            <div class="fact"><strong>Industry</strong><span>Financial Services</span></div>
-            <div class="fact"><strong>Experience</strong><span>5+ Years</span></div>
-            <div class="fact"><strong>Location</strong><span>Karachi, Pakistan</span></div>
-            <div class="fact"><strong>Career Interest</strong><span>Accounts &amp; Finance Roles</span></div>
+
+          <aside>
+
+            <div class="profile-wrapper">
+              <img
+                src="profile.jpeg"
+                alt="Muhammad Hamza Arif Profile Picture"
+                class="profile-image"
+              >
+            </div>
+
+            <div class="quick-facts">
+
+              <div class="fact">
+                <strong>Current Position</strong>
+                <span>Senior Officer – Accounts &amp; Finance</span>
+              </div>
+
+              <div class="fact">
+                <strong>Industry</strong>
+                <span>Financial Services</span>
+              </div>
+
+              <div class="fact">
+                <strong>Experience</strong>
+                <span>5+ Years</span>
+              </div>
+
+              <div class="fact">
+                <strong>Location</strong>
+                <span>Karachi, Pakistan</span>
+              </div>
+
+              <div class="fact">
+                <strong>Career Interest</strong>
+                <span>Accounts &amp; Finance Roles</span>
+              </div>
+
+            </div>
           </aside>
+
         </div>
       </div>
     </section>
 
     <section class="soft-section" id="experience">
       <div class="container">
+
         <div class="section-kicker">Professional journey</div>
         <h2>Experience</h2>
-        <p class="section-intro">Contributing to accounting and finance operations across Al Hilal's advisory businesses.</p>
+
+        <p class="section-intro">
+          Contributing to accounting and finance operations across Al Hilal's advisory businesses.
+        </p>
+
         <div class="experience">
           <h3>Senior Officer – Accounts &amp; Finance</h3>
-          <div class="company">Al Hilal Securities Advisors (Pvt.) Limited</div>
-          <p>Supporting finance and accounting activities, including transaction recording, bank and ledger reconciliations, vendor payments, payroll coordination, taxation, audit support and periodic reporting. Also work across matters involving Al Hilal Shariah Advisors.</p>
+
+          <div class="company">
+            Al Hilal Securities Advisors (Pvt.) Limited
+          </div>
+
+          <p>
+            Supporting finance and accounting activities, including transaction recording, bank and ledger reconciliations, vendor payments, payroll coordination, taxation, audit support and periodic reporting. Also work across matters involving Al Hilal Shariah Advisors.
+          </p>
         </div>
+
       </div>
     </section>
 
     <section id="skills">
       <div class="container">
+
         <div class="section-kicker">What I work with</div>
         <h2>Core Skills</h2>
-        <p class="section-intro">Practical skills developed through day-to-day finance and accounting responsibilities.</p>
+
+        <p class="section-intro">
+          Practical skills developed through day-to-day finance and accounting responsibilities.
+        </p>
+
         <div class="cards">
-          <article class="card"><div class="card-number">01</div><h3>Reconciliations</h3><p>Cash, bank and ledger reconciliations with a focus on accuracy and follow-up.</p></article>
-          <article class="card"><div class="card-number">02</div><h3>Financial Entries</h3><p>Recording transactions, maintaining ledgers and supporting accurate books.</p></article>
-          <article class="card"><div class="card-number">03</div><h3>Taxation</h3><p>Tax-related working, withholding tax matters and sales tax return support.</p></article>
-          <article class="card"><div class="card-number">04</div><h3>Payroll</h3><p>Payroll coordination, salary-related adjustments and employee settlements.</p></article>
-          <article class="card"><div class="card-number">05</div><h3>Audit Support</h3><p>Preparing schedules, supporting documents and responses for audit requirements.</p></article>
-          <article class="card"><div class="card-number">06</div><h3>Finance Operations</h3><p>Vendor payments, month-end closing and coordination with banking partners.</p></article>
+
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Reconciliations</h3>
+            <p>Cash, bank and ledger reconciliations with a focus on accuracy and follow-up.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Financial Entries</h3>
+            <p>Recording transactions, maintaining ledgers and supporting accurate books.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Taxation</h3>
+            <p>Tax-related working, withholding tax matters and sales tax return support.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">04</div>
+            <h3>Payroll</h3>
+            <p>Payroll coordination, salary-related adjustments and employee settlements.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">05</div>
+            <h3>Audit Support</h3>
+            <p>Preparing schedules, supporting documents and responses for audit requirements.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">06</div>
+            <h3>Finance Operations</h3>
+            <p>Vendor payments, month-end closing and coordination with banking partners.</p>
+          </article>
+
         </div>
+
         <div class="tag-list" aria-label="Additional skills">
           <span class="tag">Financial Reporting</span>
           <span class="tag">Accounting Systems</span>
@@ -211,51 +560,63 @@
           <span class="tag">Problem Solving</span>
           <span class="tag">Continuous Learning</span>
         </div>
+
       </div>
     </section>
 
     <section class="soft-section" id="education">
       <div class="container">
+
         <div class="section-kicker">Academic background</div>
         <h2>Education</h2>
+
         <div class="education-card">
           <h3>Bachelor of Business Administration (BBA-Hons)</h3>
           <p>Iqra University</p>
           <p>Currently completing the final semester of the programme.</p>
         </div>
+
       </div>
     </section>
 
     <section class="contact" id="contact">
       <div class="container">
+
         <div class="section-kicker">Let's connect</div>
         <h2>Open to New Opportunities</h2>
-        <p>I'm interested in connecting with professionals and exploring suitable opportunities in Accounts and Finance.</p>
+
+        <p>
+          I'm interested in connecting with professionals and exploring suitable opportunities in Accounts and Finance.
+        </p>
+
         <div class="buttons" style="justify-content:center;">
 
-    <a class="btn btn-primary"
-       href="mailto:mhamzaarif000@gmail.com">
-       Email Me
-    </a>
+          <a class="btn btn-primary"
+             href="mailto:mhamzaarif000@gmail.com">
+            Email Me
+          </a>
 
-    <a class="btn btn-outline"
-       href="https://www.linkedin.com/in/muhammad-hamza-arif/"
-       target="_blank"
-       rel="noopener noreferrer">
-       LinkedIn Profile
-    </a>
+          <a class="btn btn-outline"
+             href="https://www.linkedin.com/in/muhammad-hamza-arif/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn Profile
+          </a>
 
-</div>
+        </div>
 
-<p style="font-size:.9rem; margin-top:18px; margin-bottom:0;">
-    mhamzaarif000@gmail.com · Karachi, Pakistan · Accounts &amp; Finance
-</p>
+        <p style="font-size:.9rem; margin-top:18px; margin-bottom:0;">
+          mhamzaarif000@gmail.com · Karachi, Pakistan · Accounts &amp; Finance
+        </p>
+
       </div>
     </section>
+
   </main>
 
   <footer>
     <p>© 2026 Muhammad Hamza Arif. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
