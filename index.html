@@ -75,18 +75,14 @@ h1 em{font-style:normal;background:linear-gradient(100deg,#5eead4,#7dd3fc 55%,#f
 .hero-stats span{font-size:13px;color:#9fb6cb}
 
 /* Hero visual: photo + live reconciliation */
-.visual{position:relative;display:flex;justify-content:center;padding:20px 0 70px}
+.visual{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0}
 .photo{width:min(300px,78%);aspect-ratio:1;border-radius:34% 66% 58% 42%/42% 40% 60% 58%;padding:7px;background:linear-gradient(145deg,#5eead4,#2563eb,#fcd34d);animation:morph 12s ease-in-out infinite;box-shadow:0 30px 70px -20px rgba(0,0,0,.6)}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:center 28%;border-radius:inherit;border:5px solid var(--ink);background:#fff;display:block}
 .photo .miss{display:none;height:100%;place-items:center;text-align:center;color:#fff;font-size:13px;padding:20px}
 @keyframes morph{50%{border-radius:58% 42% 40% 60%/55% 58% 42% 45%}}
-.ledger{position:absolute;bottom:0;right:-4px;width:min(330px,96%);background:rgba(10,22,38,.88);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:14px 16px;font-family:var(--mono);font-size:12px;box-shadow:0 25px 50px -15px rgba(0,0,0,.6)}
-.ledger h4{font-family:var(--body);font-size:12px;font-weight:600;color:#9fb6cb;display:flex;justify-content:space-between;margin-bottom:8px}
-.lrow{display:grid;grid-template-columns:1fr auto auto;gap:12px;padding:6px 0;border-top:1px dashed rgba(255,255,255,.12);color:#d6e6f5;align-items:center}
-.lrow .tick{width:64px;text-align:right;color:#64748b;transition:color .3s}
-.lrow.ok .tick{color:#34d399}
-.ltotal{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.25);margin-top:4px;padding-top:8px;color:#fff}
-.ltotal b{color:#fcd34d}
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:26px}
+.pills span{padding:9px 16px;border-radius:40px;font-size:13px;font-weight:500;color:#e3effa;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px)}
+.pills span:first-child{border-color:rgba(94,234,212,.5);color:#5eead4}
 
 /* Sections */
 section{padding:96px 0}
@@ -173,7 +169,6 @@ footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-si
   .skills{grid-template-columns:1fr}
   h1{letter-spacing:-2px}
   .hero-stats{gap:22px}
-  .ledger{font-size:11px}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
@@ -228,12 +223,9 @@ footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-si
         <img src="profile.jpeg" alt="Muhammad Hamza Arif" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
         <div class="miss">Add profile.jpeg next to this file</div>
       </div>
-      <div class="ledger" aria-label="Sample reconciliation animation">
-        <h4><span>Bank vs Ledger</span><span>sample</span></h4>
-        <div class="lrow"><span>Vendor payment</span><span>12,400</span><span class="tick">pending</span></div>
-        <div class="lrow"><span>Salary transfer</span><span>85,000</span><span class="tick">pending</span></div>
-        <div class="lrow"><span>Tax deposit</span><span>9,750</span><span class="tick">pending</span></div>
-        <div class="ltotal"><span>Difference</span><b id="diff">107,150</b></div>
+      <div class="pills">
+        <span>Senior Officer · Accounts &amp; Finance</span>
+        <span>Karachi, Pakistan</span>
       </div>
     </div>
   </div>
@@ -377,20 +369,6 @@ const tr=document.getElementById("track");tr.innerHTML+=tr.innerHTML;
 const cn=document.querySelector("[data-count]"),goal=+cn.dataset.count;let n=0;
 const ci2=setInterval(()=>{n++;cn.textContent=n+"+";if(n>=goal)clearInterval(ci2)},180);
 
-// Hero ledger: rows get matched one by one, difference drops to zero, then loops
-const rows=[...document.querySelectorAll(".lrow")],amts=[12400,85000,9750],diff=document.getElementById("diff");
-const fmt=v=>v.toLocaleString("en-US");
-function cycle(){
-  let left=amts.reduce((a,b)=>a+b,0);
-  rows.forEach(r=>{r.classList.remove("ok");r.querySelector(".tick").textContent="pending"});
-  diff.textContent=fmt(left);
-  rows.forEach((r,i)=>setTimeout(()=>{
-    r.classList.add("ok");r.querySelector(".tick").textContent="✓ matched";
-    left-=amts[i];diff.textContent=fmt(left);
-  },1100*(i+1)));
-  setTimeout(cycle,1100*rows.length+3200);
-}
-cycle();
 </script>
 </body>
 </html>
