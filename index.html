@@ -35,7 +35,9 @@ header{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);background:c
 nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand .logo{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:#04201d;background:linear-gradient(135deg,var(--accent2),var(--amber));box-shadow:0 8px 20px -8px var(--accent);transition:transform .3s}
-.brand:hover .logo{transform:rotate(-8deg) scale(1.06)}
+.brand .logo{border-radius:50%;overflow:hidden;padding:2px;background:linear-gradient(135deg,var(--accent2),var(--accent))}
+.brand .logo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;border-radius:50%;display:block}
+  .brand:hover .logo{transform:rotate(-8deg) scale(1.06)}
 .brand .logo svg{width:23px;height:23px}
 .brand .txt{display:flex;flex-direction:column;line-height:1.15}
 .brand .txt b{font-family:var(--display);font-weight:800;font-size:19px;letter-spacing:-.5px}
@@ -199,7 +201,7 @@ footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-si
   <div class="container">
     <nav>
       <a href="#home" class="brand" aria-label="M Hamza Arif - home">
-        <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><rect x="7" y="5.5" width="10" height="4" rx="1"/><path d="M8 13.5h.01M12 13.5h.01M16 13.5h.01M8 17.5h.01M12 17.5h.01M16 17.5h.01"/></svg></span>
+        <span class="logo"><img src="profile.jpeg" alt="" width="42" height="42"></span>
         <span class="txt"><b>M Hamza Arif</b><small>Accounts &amp; Finance</small></span>
       </a>
       <div class="nav-right">
@@ -273,13 +275,13 @@ footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-si
 
 <section class="soft" id="experience">
   <div class="container">
-    <div class="head reveal"><small>Experience</small><h2>Where I work now</h2><p>Supporting accounting and finance operations across Al Hilal's advisory businesses.</p></div>
+    <div class="head reveal"><small>Experience</small><h2>Where I work now</h2></div>
     <div class="timeline reveal">
       <div class="job">
         <div class="when">Dec 2020 – Present</div>
         <h3>Accounts &amp; Finance</h3>
         <div class="co">Al Hilal Securities Advisors (Pvt.) Limited</div>
-        <p>Supporting finance and accounting activities including daily bank and cash reconciliations, recording PVs, RVs and JVs, petty cash and cheque preparation, salary disbursement, withholding and sales tax returns, and annual audit support. Also work on matters involving Al Hilal Shariah Advisors.</p>
+        <p>Supporting finance and accounting activities including daily bank and cash reconciliations, recording PVs, RVs and JVs, petty cash and cheque preparation, salary disbursement, withholding and sales tax returns, and annual audit support.</p>
         <div class="chips"><span>Reconciliations</span><span>Petty cash</span><span>Salary disbursement</span><span>Taxation</span><span>Audit support</span><span>Reporting</span></div>
       </div>
     </div>
