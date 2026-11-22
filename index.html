@@ -149,6 +149,16 @@ h2{font-size:clamp(32px,4.4vw,48px);line-height:1.1;letter-spacing:-1.5px;margin
 .contact p{color:#b9cbdc;max-width:560px;margin:10px auto 30px}
 .contact .buttons{justify-content:center}
 .contact .mail{margin-top:26px;font-family:var(--mono);font-size:13px;color:#8aa3ba}
+.cform{max-width:560px;margin:0 auto 30px;text-align:left;display:grid;gap:14px}
+.cform .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cform label{display:grid;gap:6px;font-size:13px;color:#b9cbdc;font-weight:500}
+.cform input,.cform textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:15px}
+.cform input::placeholder,.cform textarea::placeholder{color:#8aa3ba}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--accent2);box-shadow:0 0 0 3px rgba(94,234,212,.25)}
+.cform textarea{resize:vertical}
+.cform .btn{justify-self:start}
+.cform small{color:#8aa3ba;font-size:12.5px}
+@media(max-width:520px){.cform .row{grid-template-columns:1fr}}
 footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-size:13px}
 .top{position:fixed;right:24px;bottom:24px;width:46px;height:46px;border:none;border-radius:14px;background:var(--accent);color:#04201d;font-size:20px;font-weight:700;cursor:pointer;display:none;z-index:90;box-shadow:0 10px 25px -8px var(--accent)}
 .top.show{display:block}
@@ -323,8 +333,16 @@ footer{background:#050c15;color:#8aa3ba;padding:24px 0;text-align:center;font-si
   <div class="container">
     <h2>Let's talk finance.</h2>
     <p>I enjoy meeting people in the finance world. If you'd like to exchange ideas, collaborate or just say hello, I'd be happy to hear from you.</p>
+    <form class="cform" id="mailForm">
+      <div class="row">
+        <label>Your name<input type="text" id="cfName" required placeholder="Your name"></label>
+        <label>Subject<input type="text" id="cfSubject" required placeholder="What is this about?"></label>
+      </div>
+      <label>Message<textarea id="cfMsg" rows="5" required placeholder="Write your message…"></textarea></label>
+      <button type="submit" class="btn btn-primary">Send message →</button>
+      <small>This opens your email app with the message ready to send.</small>
+    </form>
     <div class="buttons">
-      <a class="btn btn-primary" href="mailto:mhamzaarif000@gmail.com">✉ Email me</a>
       <a class="btn btn-outline" href="Muhammad Hamza Arif CV.pdf" download>Download CV ↓</a>
       <a class="btn btn-outline" href="https://www.linkedin.com/in/muhammad-hamza-arif/" target="_blank" rel="noopener noreferrer">LinkedIn profile ↗</a>
     </div>
@@ -389,6 +407,15 @@ const tr=document.getElementById("track");tr.innerHTML+=tr.innerHTML;
 // Years counter
 const cn=document.querySelector("[data-count]"),goal=+cn.dataset.count;let n=0;
 const ci2=setInterval(()=>{n++;cn.textContent=n+"+";if(n>=goal)clearInterval(ci2)},180);
+
+document.getElementById("mailForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const n=document.getElementById("cfName").value.trim(),
+        s=document.getElementById("cfSubject").value.trim(),
+        m=document.getElementById("cfMsg").value.trim();
+  const body="Hi Hamza,\n\n"+m+"\n\nRegards,\n"+n;
+  location.href="mailto:mhamzaarif000@gmail.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(body);
+});
 
 </script>
 </body>
